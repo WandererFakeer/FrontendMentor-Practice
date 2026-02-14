@@ -1,0 +1,128 @@
+/* font-face for the normal variable font */
+@font-face {
+  font-family: "Figtree";
+  src: url("assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* font-face for the italic variable font */
+@font-face {
+  font-family: "Figtree";
+  src: url("assets/fonts/Figtree-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 300 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Figtree", sans-serif;
+}
+
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-900: hsl(0, 0%, 7%);
+}
+
+html,
+body {
+  min-block-size: 100dvh;
+}
+
+body {
+  background-color: var(--yellow);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  background-color: var(--white);
+  inline-size: calc(360 / 16 * 1rem);
+  margin-inline: auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  outline: 1px solid;
+  display: grid;
+  gap: 1rem;
+  overflow-wrap: anywhere;
+  filter: drop-shadow(6px 6px 0px var(--gray-900));
+}
+
+figure.header-figure {
+  display: grid;
+  gap: 1.2rem;
+}
+
+figure .header-image {
+  inline-size: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+figure .header-caption {
+  display: grid;
+  gap: 0.75rem;
+}
+
+figure h2.header-tag {
+  background-color: var(--yellow);
+  inline-size: fit-content;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  color: var(--gray-900);
+  font-size: 1.1rem;
+}
+
+figure .header-date {
+  font-weight: 500;
+}
+
+article {
+  display: grid;
+  gap: 1rem;
+}
+
+article h1.article-heading {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+a {
+  color: var(--gray-900);
+  text-decoration: none;
+  transition: color 2000ms;
+}
+
+a:is(:hover, :focus-visible) {
+  color: var(--yellow);
+  transition: color 1000ms;
+}
+
+article p.article-para {
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+figure.article-author {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+figure.article-author img {
+  max-inline-size: 100%;
+}
+
+figure.article-author h3 {
+  font-size: 1rem;
+}
