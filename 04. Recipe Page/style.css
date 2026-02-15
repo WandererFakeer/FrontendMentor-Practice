@@ -1,0 +1,204 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("assets/fonts/Outfit-VariableFont_wght.ttf") format(truetype);
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: url("assets/fonts/YoungSerif-Regular.ttf") format(truetype);
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --spacer: 1.5rem;
+  --border-radius-small: 0.75rem;
+  --border-radius-large: var(--spacer);
+  --rose-800: hsl(332, 51%, 32%);
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --preferred-font-size: 2vw;
+  --font-weight-1: 400;
+  --font-weight-2: 600;
+  --font-weight-3: 700;
+}
+
+html,
+body {
+  min-block-size: 100dvh;
+}
+
+body {
+  background-color: var(--stone-100);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+:where(header.hero-header, main) {
+  background-color: var(--white);
+  inline-size: min(100% - 2rem, 700 / 16 * 1rem);
+  padding-inline: clamp(1rem, var(--spacer) + 0.5vw, 2rem);
+}
+
+header.hero-header {
+  padding-block-start: 2rem;
+  border-start-start-radius: var(--border-radius-large);
+  border-start-end-radius: var(--border-radius-large);
+}
+
+img {
+  inline-size: 100%;
+  min-inline-size: 1rem;
+  border-radius: var(--border-radius-small);
+}
+
+main {
+  padding-block: var(--spacer);
+  border-end-start-radius: var(--border-radius-large);
+  border-end-end-radius: var(--border-radius-large);
+}
+
+article {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+}
+
+:where(header.recipe-header h1, h2.ingredients, h2.instructions, h2.nutrition) {
+  font-family: "Young Serif", sans-serif, system-ui;
+}
+
+header.recipe-header h1 {
+  margin-block-end: 1rem;
+  color: var(--stone-900);
+  font-size: clamp(1rem, var(--preferred-font-size), 2.5rem);
+  font-weight: var(--font-weight-3);
+}
+
+p,
+h2.prep-time,
+li,
+table {
+  font-family: "Outfit", sans-serif, system-ui;
+}
+
+p,
+li {
+  color: var(--stone-600);
+}
+
+header.recipe-header p,
+ol li {
+  line-height: 1.5;
+}
+
+section {
+  display: grid;
+  gap: 1rem;
+}
+
+section.prep-time-section {
+  margin-block-start: 2rem;
+  padding-inline-start: clamp(0.5rem, 0.75rem + 0.5vw, var(--spacer));
+}
+
+h2.prep-time {
+  color: var(--rose-800);
+  font-size: clamp(0.875rem, var(--preferred-font-size), 1.2rem);
+}
+
+:is(ul.prep-info, ul.ingredients-list, ol.instructions-list) {
+  padding-inline-start: clamp(1rem, var(--preferred-font-size), var(--spacer));
+  display: grid;
+  gap: 0.75rem;
+}
+
+ul.prep-info li::marker {
+  color: var(--rose-800);
+}
+
+:where(ul, ol) li {
+  padding-inline-start: clamp(0.5rem, 0.75rem + 0.5vw, 1.2rem);
+}
+
+:is(ul.prep-info, ol.instructions-list) :where(h3, p) {
+  display: inline;
+  font-size: clamp(0.875rem, var(--preferred-font-size), 1rem);
+}
+
+:where(h2.ingredients, h2.instructions, h2.nutrition) {
+  font-size: clamp(1rem, var(--preferred-font-size), 1.7rem);
+  color: var(--brown-800);
+}
+
+:where(ul.ingredients-list, ol.instructions-list) li::marker {
+  color: var(--brown-800);
+}
+
+section.ingredients-section {
+  padding-block-start: 1rem;
+}
+
+:where(section.ingredients-section, section.instructions-section) {
+  padding-block-end: 2rem;
+  box-shadow: 0 1px 0 var(--stone-150);
+}
+
+ol li::marker {
+  font-weight: var(--font-weight-3);
+}
+
+section.nutrition-section p {
+  margin-block-end: 1rem;
+}
+
+table {
+  inline-size: 100%;
+}
+
+table > * {
+  display: grid;
+  gap: 1rem;
+}
+
+tr {
+  padding-block-end: 1rem;
+  padding-inline: min(1rem, clamp(0.5rem, 1vw, 2rem));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  justify-items: start;
+  gap: 0.5rem;
+}
+
+tr:not(:last-of-type) {
+  box-shadow: 0 1px 0 var(--stone-150);
+}
+
+th {
+  color: var(--stone-600);
+  font-weight: var(--font-weight-1);
+}
+
+td {
+  color: var(--brown-800);
+  font-weight: var(--font-weight-2);
+}
