@@ -42,9 +42,9 @@ This is a solution to the Product Preview Card Component challenge on Frontend M
 
 For the product image, I was using both images - `assets\images\image-product-desktop.jpg` and `assets\images\image-product-mobile.jpg` in the HTML markup with `<figure>`, and then was controlling their views in CSS with `display: none;` and `display: block`.
 
-According to MDN, image is called as *replaced element* ([<img>: The Image Embed element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img)), I was bit confused as to in which element should I nest the images.
+According to MDN, image is called as *replaced element* ([`<img>`: The Image Embed element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img)), I was bit confused as to in which element should I nest the images.
 
-I found out that it is better to use `<picture>`, where we can define multiple image sources for different conditions and inside it, we can add `<source>` with `srcset`,  and `type` attribute. We can also use `media` attribute to tell the browser how wide the image will be displayed ([The picture element](https://web.dev/learn/design/picture-element)). Then we add one `<img>` element to offer alternative versions of an image for different display/device scenarios. ([<picture>: The Picture element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture)).
+I found out that it is better to use `<picture>`, where we can define multiple image sources for different conditions and inside it, we can add `<source>` with `srcset`,  and `type` attribute. We can also use `media` attribute to tell the browser how wide the image will be displayed ([The picture element](https://web.dev/learn/design/picture-element)). Then we add one `<img>` element to offer alternative versions of an image for different display/device scenarios. ([`<picture>`: The Picture element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture)).
 
 The HTML code snippets looks like this -
 
@@ -69,8 +69,9 @@ The HTML code snippets looks like this -
 ### Useful resources
 
 - [The picture element](https://web.dev/learn/design/picture-element)
-- [<picture>: The Picture element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture)
+- [`<picture>`: The Picture element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture)
 
 
 ## Author
+
 - Frontend Mentor - [@WandererFakeer](https://www.frontendmentor.io/profile/WandererFakeer)
