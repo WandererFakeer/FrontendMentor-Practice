@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif, system-ui;
+}
+
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --Grey-400: hsl(212, 6%, 44%);
+  --Grey-500: hsl(234, 12%, 34%);
+  --white: hsl(0, 0%, 100%);
+  --font-weight-1: 200;
+  --font-weight-2: 400;
+  --font-weight-3: 600;
+}
+
+body {
+  background-color: var(--white);
+  padding: 3rem 0.5rem;
+}
+
+header,
+main {
+  inline-size: min(100% - 2rem, 1110 / 16 * 1rem);
+  margin-inline: auto;
+}
+
+header {
+  display: grid;
+  justify-items: center;
+  gap: 1.2rem;
+  text-align: center;
+}
+
+header h1 {
+  color: var(--Grey-400);
+  font-size: clamp(1rem, 2.2vw, 2rem);
+  font-weight: var(--font-weight-1);
+  text-box: trim-end text alphabetic;
+}
+
+:where(header h2, section h3) {
+  color: var(--Grey-500);
+  font-weight: var(--font-weight-3);
+}
+
+header h2 {
+  font-size: clamp(1rem, 2vw, 2rem);
+  letter-spacing: 1.5px;
+  text-box: trim-both cap alphabetic;
+}
+
+:where(header p, section p) {
+  color: var(--Grey-400);
+  font-weight: var(--font-weight-1);
+}
+
+header p {
+  inline-size: clamp(5rem, 40vw, 40rem);
+}
+
+main {
+  margin-block-start: 3rem;
+  display: grid;
+  gap: 1.5rem;
+
+  @media (width >= calc(850 / 16 * 1rem)) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "supervisor team-builder calculator"
+      "supervisor karma calculator";
+  }
+}
+
+article {
+  border-block-start-width: 4px;
+  border-block-start-style: solid;
+  padding-block: 1.5rem;
+  padding-inline: clamp(1.5rem, 2vw, 2rem);
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 2rem;
+  box-shadow: 2px 2px 12px var(--Grey-400);
+}
+
+article.supervisor {
+  border-block-start-color: var(--cyan);
+
+  @media (width >= calc(850 / 16 * 1rem)) {
+    grid-area: supervisor;
+    align-self: center;
+  }
+}
+
+article.team-builder {
+  border-block-start-color: var(--red);
+
+  @media (width >= calc(850 / 16 * 1rem)) {
+    grid-area: team-builder;
+  }
+}
+
+article.calculator {
+  border-block-start-color: var(--blue);
+
+  @media (width >= calc(850 / 16 * 1rem)) {
+    grid-area: calculator;
+    align-self: center;
+  }
+}
+
+article.karma {
+  border-block-start-color: var(--orange);
+
+  @media (width >= calc(850 / 16 * 1rem)) {
+    grid-area: karma;
+  }
+}
+
+section p {
+  margin-block-start: 0.5rem;
+}
+
+img {
+  max-inline-size: 100%;
+  justify-self: end;
+}
