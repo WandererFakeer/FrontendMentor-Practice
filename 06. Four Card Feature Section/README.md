@@ -17,7 +17,7 @@ This is a solution to the Four Card Feature Section challenge on Frontend Mentor
 
 ### Screenshot
 
-![Four-Card-Feature-Section.png](https://i.postimg.cc/Ssmwjn7L/Four-Card-Feature-Section.png)
+![Four-Card-Feature-Section.png](https://i.postimg.cc/LXHJKyp1/Four-Card-Feature-Section.png)
 
 
 ### Links
@@ -36,4 +36,5 @@ This is a solution to the Four Card Feature Section challenge on Frontend Mentor
 
 
 ## Author
+
 - Frontend Mentor - [@WandererFakeer](https://www.frontendmentor.io/profile/WandererFakeer)
