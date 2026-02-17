@@ -22,7 +22,7 @@ This is a solution to the Four Card Feature Section challenge on Frontend Mentor
 
 ### Links
 
-- Live Site URL: [Frontend Mentor | Four Card Feature Section](https://frontendmentorfourcardecss.netlify.app/)
+- Live Site URL: [Frontend Mentor | Four Card Feature Section](https://frontendmentorfourcardcss.netlify.app/)
 
 
 ## My process
@@ -38,3 +38,4 @@ This is a solution to the Four Card Feature Section challenge on Frontend Mentor
 ## Author
 
 - Frontend Mentor - [@WandererFakeer](https://www.frontendmentor.io/profile/WandererFakeer)
+
