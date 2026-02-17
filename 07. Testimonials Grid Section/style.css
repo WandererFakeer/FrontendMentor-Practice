@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+:root {
+  --violet: hsl(263, 55%, 52%);
+  --dark-grayish-blue: hsl(217, 19%, 35%);
+  --blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --box-shadow-color: rgba(72 85 106 / 0.24);
+}
+
+main {
+  inline-size: min(100% - 2rem, 1110 / 16 * 1rem);
+  margin: 1rem auto;
+  display: grid;
+  gap: 1.5rem;
+  font-weight: 500;
+
+  @media (width >= calc(850 / 16 * 1rem)) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "feedback-daniel feedback-daniel feedback-jonathan feedback-kira"
+      "feedback-jeanette feedback-patrick feedback-patrick feedback-kira";
+  }
+}
+
+article.feedback-daniel {
+  background-color: var(--violet);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  @media (width >= calc(850 / 16 * 1rem)) {
+    grid-area: feedback-daniel;
+  }
+}
+
+article.feedback-jonathan {
+  background-color: var(--dark-grayish-blue);
+
+  @media (width >= calc(850 / 16 * 1rem)) {
+    grid-area: feedback-jonathan;
+  }
+}
+
+article.feedback-jeanette {
+  @media (width >= calc(850 / 16 * 1rem)) {
+    grid-area: feedback-jeanette;
+  }
+}
+
+article.feedback-patrick {
+  background-color: var(--blackish-blue);
+
+  @media (width >= calc(850 / 16 * 1rem)) {
+    grid-area: feedback-patrick;
+    align-self: end;
+  }
+}
+
+article.feedback-kira {
+  @media (width >= calc(850 / 16 * 1rem)) {
+    grid-area: feedback-kira;
+  }
+}
+
+article {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 40px 60px 50px -47px var(--box-shadow-color);
+}
+
+figure {
+  margin-block-end: 1rem;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+}
+
+figure img {
+  inline-size: 2rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 100vw;
+}
+
+:where(figure h2, section p) {
+  font-size: calc(13 / 16 * 1rem);
+}
+
+figure p {
+  font-size: calc(11 / 16 * 1rem);
+}
+
+section h2 {
+  margin-block-end: 1rem;
+  font-size: calc(20 / 16 * 1rem);
+  font-weight: 600;
+}
+
+section p {
+  line-height: 1.5;
+}
+
+:where(
+    article.feedback-daniel,
+    article.feedback-jonathan,
+    article.feedback-patrick
+  )
+  h2 {
+  color: var(--white);
+}
+
+:where(
+    article.feedback-daniel,
+    article.feedback-jonathan,
+    article.feedback-patrick
+  )
+  :where(figure)
+  p {
+  color: hsla(0 0% 100% / 0.5);
+}
+
+:where(
+    article.feedback-daniel,
+    article.feedback-jonathan,
+    article.feedback-patrick
+  )
+  :where(section)
+  p {
+  color: hsla(0 0% 100% / 0.7);
+}
+
+:where(article.feedback-kira, article .feedback-jeanette) {
+  background-color: var(--white);
+}
+
+:where(article.feedback-kira, article.feedback-jeanette) h2 {
+  color: var(--dark-grayish-blue);
+}
+
+:where(article.feedback-kira, article.feedback-jeanette) figure p {
+  color: hsla(217 19% 35% / 0.5);
+}
+
+:where(article.feedback-kira, article.feedback-jeanette) section p {
+  color: hsla(217 19% 35% / 0.7);
+}
+
+img.decoration-quote-icon {
+  inline-size: 20%;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 15%;
+  isolation: isolate;
+  z-index: -1;
+}
