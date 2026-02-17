@@ -15,6 +15,7 @@
   --Grey-400: hsl(212, 6%, 44%);
   --Grey-500: hsl(234, 12%, 34%);
   --white: hsl(0, 0%, 100%);
+  --shadow-color: rgba(0, 0, 0, 0.1);
   --font-weight-1: 200;
   --font-weight-2: 400;
   --font-weight-3: 600;
@@ -86,7 +87,7 @@ article {
   border-radius: 0.5rem;
   display: grid;
   gap: 2rem;
-  box-shadow: 2px 2px 12px var(--Grey-400);
+  box-shadow: 0 10px 20px var(--shadow-color);
 }
 
 article.supervisor {
@@ -131,3 +132,4 @@ img {
   max-inline-size: 100%;
   justify-self: end;
 }
+
