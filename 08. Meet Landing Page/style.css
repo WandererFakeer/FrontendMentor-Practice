@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --hippie-blue: hsl(192 37% 48%);
+  --hippie-blue-transparent: hsl(192 37% 48% / 0.8);
+  --malibu: hsl(192 90% 77%);
+  --deluge: hsl(267 34% 53%);
+  --lavender: hsl(267 54% 71%);
+  --alto: hsl(0 0% 85%);
+  --muted-blue: hsl(240 10% 57%);
+  --white: hsl(0 0% 100%);
+  --alabaster: hsl(0 0% 98%);
+  --ebony-clay: hsl(239 21% 20%);
+  --manatee: hsl(239 10% 57%);
+  --mauve: hsl(268 100% 86%);
+  --font-weight-1: 900;
+  --font-weight-2: 500;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+:where(header.hero-header, main, aside) {
+  inline-size: min(100% - 2rem, 1300 / 16 * 1rem);
+}
+
+header.hero-header {
+  margin-block-start: 3rem;
+  margin-block-end: 4rem;
+  display: grid;
+  justify-items: center;
+  gap: 2.5rem;
+}
+
+header.hero-header img.site-logo {
+  inline-size: min(100% - 2rem, 7rem);
+}
+
+header.hero-header div.hero-section {
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+
+  @media (width >= calc(1440 / 16 * 1rem)) {
+    grid-template-columns: auto 1fr auto;
+  }
+}
+
+:where(header.hero-header picture) img {
+  max-inline-size: 100%;
+  height: auto;
+  aspect-ratio: 3 / 1;
+  object-fit: contain;
+
+  @media (width >= calc(1440 / 16 * 1rem)) {
+    aspect-ratio: 1.5 / 1;
+  }
+}
+
+img.tablet-double-image {
+  @media (width <= calc(1440 / 16 * 1rem)) {
+    display: none;
+  }
+}
+
+:where(header.hero-header div.hero-section) section {
+  display: grid;
+  gap: 1rem;
+  text-align: center;
+}
+
+:where(header.hero-header h1, main section p.bold-text) {
+  color: var(--ebony-clay);
+}
+
+:where(header.hero-header section) h1 {
+  font-size: clamp(1.2rem, 5vw, 4rem);
+  font-weight: var(--font-weight-1);
+}
+
+:where(header.hero-header p, main section.usage-description p.normal-text) {
+  color: var(--manatee);
+  font-size: clamp(14 / 16 * 1rem, 3vw, 18 / 16 * 1rem);
+  font-weight: var(--font-weight-2);
+}
+
+:where(header.hero-header section) div.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+button {
+  border: none;
+  padding-block: clamp(0.25rem, 0.5rem + 0.5vw, 0.75rem);
+  padding-inline: clamp(0.5rem, 0.75rem + 0.5vw, 1.2rem);
+  border-radius: 100vw;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: var(--font-weight-1);
+  cursor: pointer;
+  transition: background-color 1500ms;
+}
+
+button.download-button {
+  background-color: var(--hippie-blue);
+}
+
+button.download-button:is(:hover, :focus-visible) {
+  background-color: var(--malibu);
+  transition: background-color 750ms;
+}
+
+:where(header.hero-header button.download-button) span.header-version {
+  color: var(--malibu);
+}
+
+button.what-button {
+  background-color: var(--deluge);
+}
+
+button.what-button:is(:hover, :focus-visible) {
+  background-color: var(--lavender);
+  transition: background-color 750ms;
+}
+
+main {
+  margin-block-end: 2.5rem;
+}
+
+main article::before,
+aside::before {
+  content: "";
+  inline-size: 0.01px;
+  block-size: 5rem;
+  margin-inline: auto;
+  border: 1px solid var(--alto);
+  display: block;
+}
+
+:where(main header.main-header, aside article) p.number {
+  background-color: var(--alabaster);
+  inline-size: fit-content;
+  aspect-ratio: 1 / 1;
+  margin-inline: auto;
+  margin-block-end: 2rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 50%;
+  outline: 1px solid var(--alto);
+  align-content: center;
+  color: var(--manatee);
+  font-weight: var(--font-weight-1);
+}
+
+:where(main header.main-header) figure {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+figure img {
+  inline-size: min(100%, 15rem);
+  border-radius: 0.5rem;
+}
+
+main section.usage-description {
+  margin-block-start: 3rem;
+
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+}
+
+:where(main section.usage-description) h2 {
+  color: var(--hippie-blue);
+  font-size: 1rem;
+  font-weight: var(--font-weight-1);
+  text-transform: uppercase;
+}
+
+:where(main section.usage-description) p {
+  inline-size: clamp(10rem, 42vw, 45rem);
+}
+
+:where(main section.usage-description) p.bold-text {
+  font-size: clamp(1rem, 4vw, 2.75rem);
+  font-weight: var(--font-weight-1);
+}
+
+aside article {
+  background-image:
+    linear-gradient(var(--hippie-blue-transparent)),
+    url("assets/mobile/image-footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding-inline: 2rem;
+  position: relative;
+
+  @media (width >= calc(768 / 16 * 1rem)) {
+    background-image:
+      linear-gradient(var(--hippie-blue-transparent)),
+      url("assets/tablet/image-footer.jpg");
+  }
+
+  @media (width >= calc(1440 / 16 * 1rem)) {
+    background-image:
+      linear-gradient(var(--hippie-blue-transparent)),
+      url("assets/desktop/image-footer.jpg");
+  }
+}
+
+aside article p.number {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+aside section.stay-connected-description {
+  padding-block: 3rem;
+  color: var(--alabaster);
+  display: grid;
+  justify-items: center;
+  align-items: baseline;
+  gap: 1.5rem;
+
+  @media (width >= calc(1440 / 16 * 1rem)) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    text-align: start;
+  }
+}
+
+:where(aside section.stay-connected-description) h2 {
+  font-size: clamp(1rem, 4vw, 2.5rem);
+  font-weight: var(--font-weight-1);
+}
+
+:where(aside section.stay-connected-description) p {
+  font-size: clamp(14 / 16 * 1rem, 3vw, 18 / 16 * 1rem);
+  font-weight: var(--font-weight-2);
+}
+
+:where(aside section.stay-connected-description) button {
+  background-color: var(--deluge);
+}
+
+:where(aside section.stay-connected-description)
+  button:is(:hover, :focus-visible) {
+  background-color: var(--lavender);
+  transition: background-color 750ms;
+}
+
+:where(aside section.stay-connected-description) span.aside-version {
+  color: var(--mauve);
+}
