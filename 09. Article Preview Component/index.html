@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Article preview component</title>
+  </head>
+  <body>
+    <main>
+      <article class="card">
+        <img src="assets/drawers.jpg" alt="Image of a green colored table along with some drawer spaces, with two photo frames and a flower vase with flower on top of hat table" class="product-image" />
+
+        <section aria-labelledby="furniture" class="furniture-section">
+          <h1 id="furniture">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h1>
+          <p>
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I've got some simple tips to help
+            you make any room feel complete.
+          </p>
+          <figure>
+            <img src="assets/avatar-michelle.jpg" alt="Headshot of the writer" class="headshot" />
+            <figcaption>
+              <h2>Michelle Appleton</h2>
+              <time datetime="2020-06-28">28 Jun 2020</time>
+            </figcaption>
+
+            <div class="share-container">
+              <button class="share-button" type="button">
+                <img src="assets/icon-share.svg" alt="Share button" id="share" />
+              </button>
+
+              <div class="social-links" hidden>
+                <span class="share">Share</span>
+                <img src="assets/icon-facebook.svg" alt="Faceook share" />
+                <img src="assets/icon-twitter.svg" alt="Twitter share"" />
+                <img src="assets/icon-pinterest.svg" alt="Pinterest share"" />
+                <img
+                  src="assets/icon-share.svg"
+                  alt=""
+                  class="share-for-small-screen"
+                />
+              </div>
+            </div>
+          </figure>
+        </section>
+      </article>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
