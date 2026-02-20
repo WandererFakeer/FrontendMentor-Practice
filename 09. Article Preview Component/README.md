@@ -31,6 +31,7 @@ When clicking on the share button, it opens up share popover with FaceBook, Twit
 ### Built with
 
 - Semantic HTML5 markup
+- Accessible markup
 - CSS custom properties
 - CSS Flexbox
 - CSS Grid
@@ -39,5 +40,6 @@ When clicking on the share button, it opens up share popover with FaceBook, Twit
 
 
 ## Author
+
 
 - Frontend Mentor - [@WandererFakeer](https://www.frontendmentor.io/profile/WandererFakeer)
