@@ -154,6 +154,10 @@ figcaption time {
   background-image: linear-gradient(var(--desaturated-dark-blue-transparent));
 }
 
+.social-links-tooltip-invisible {
+  display: none;
+}
+
 .social-links-tooltip-visible {
   background-color: var(--very-dark-grayish-blue);
   padding: 1.5rem 1rem;
@@ -228,5 +232,3 @@ span.share {
     display: none;
   }
 }
-
-
