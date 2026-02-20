@@ -40,6 +40,11 @@ body {
 main {
   inline-size: min(100% - 2rem, 730 / 16 * 1rem);
   box-sizing: 0 40px 40px -10px var(--light-azure);
+  anchor-name: --share-anchor;
+
+  @media (width >= calc(660 / 16 * 1rem)) {
+    anchor-name: none;
+  }
 }
 
 article.card {
@@ -110,11 +115,11 @@ section figure {
   grid-template-columns: 2.5rem 1fr auto;
   justify-items: start;
   gap: clamp(0.5rem, 1rem + 0.5vw, 1.5rem);
-  anchor-name: --share-anchor;
+  /*anchor-name: --share-anchor;
 
   @media (width >= calc(660 / 16 * 1rem)) {
     anchor-name: none;
-  }
+  }*/
 }
 
 figure img.headshot {
@@ -154,11 +159,11 @@ figcaption time {
   background-image: linear-gradient(var(--desaturated-dark-blue-transparent));
 }
 
-.social-links {
+.social-links-tooltip-invisible {
   display: none;
 }
 
-.visible {
+.social-links-tooltip-visible {
   background-color: var(--very-dark-grayish-blue);
   padding: 1.5rem 1rem;
   border-end-start-radius: 0.5rem;
@@ -173,7 +178,7 @@ figcaption time {
   line-height: var(--line-height-2);
   position: absolute;
   position-anchor: --share-anchor;
-  inset-block-start: anchor(top);
+  inset-block-start: calc(anchor(bottom) - 3rem);
   inset-block-end: anchor(bottom);
   inset-inline-start: 0;
   inset-inline-end: 0;
@@ -189,11 +194,7 @@ figcaption time {
   }
 }
 
-.visible > * {
-  align-content: center;
-}
-
-.visible::after {
+.social-links-tooltip-visible::after {
   @media (width >= calc(660 / 16 * 1rem)) {
     background-color: var(--very-dark-grayish-blue);
     content: "";
@@ -221,11 +222,11 @@ span.share {
   }
 }
 
-.visible img {
+.social-links-tooltip-visible img {
   inline-size: 1rem;
 }
 
-.visible .share-for-small-screen {
+.social-links-tooltip-visible .share-icon-small-screen {
   background-image: linear-gradient(var(--desaturated-dark-blue-transparent));
   inline-size: 1.5rem;
   margin-inline-start: auto;

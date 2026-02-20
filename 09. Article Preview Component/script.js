@@ -1,10 +1,12 @@
 // DOM references
 const shareButtonEl = document.querySelector(".share-button");
-const socialLinksEl = document.querySelector(".social-links");
+const socialLinksToolTipEl = document.querySelector(
+  ".social-links-tooltip-invisible",
+);
 
 function shareLinksFunction() {
-  socialLinksEl.classList.toggle("social-links");
-  socialLinksEl.classList.toggle("visible");
+  socialLinksToolTipEl.classList.toggle("social-links-tooltip-invisible");
+  socialLinksToolTipEl.classList.toggle("social-links-tooltip-visible");
 }
 
 // Event listener
