@@ -115,11 +115,6 @@ section figure {
   grid-template-columns: 2.5rem 1fr auto;
   justify-items: start;
   gap: clamp(0.5rem, 1rem + 0.5vw, 1.5rem);
-  /*anchor-name: --share-anchor;
-
-  @media (width >= calc(660 / 16 * 1rem)) {
-    anchor-name: none;
-  }*/
 }
 
 figure img.headshot {
@@ -237,3 +232,4 @@ span.share {
     display: none;
   }
 }
+
