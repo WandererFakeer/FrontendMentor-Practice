@@ -17,7 +17,7 @@
   <body>
     <main>
       <article class="card">
-        <img src="assets/drawers.jpg" alt="Image of a green colored table along with some drawer spaces, with two photo frames and a flower vase with flower on top of hat table" class="product-image" />
+        <img src="assets/drawers.jpg" alt="Image of a green colored table along with some drawer spaces, with two photo frames and a flower vase on top of that table" class="product-image" />
 
         <section aria-labelledby="furniture" class="furniture-section">
           <h1 id="furniture">
@@ -37,14 +37,14 @@
             </figcaption>
 
             <div class="share-container">
-              <button class="share-button" type="button">
+              <button class="share-button" id="share-button" type="button" aria-label="Share">
                 <img src="assets/icon-share.svg" alt="Share button" id="share" />
               </button>
 
-              <div class="social-links-tooltip-invisible">
+              <div class="social-links-tooltip-invisible" id="social-links-tooltip-invisible" aria-live="polite" aria-atomic="true">
                 <span class="share">Share</span>
-                <img src="assets/icon-facebook.svg" alt="Faceook share" />
-                <img src="assets/icon-twitter.svg" alt="Twitter share"" />
+                <img src="assets/icon-facebook.svg" alt="FaceBook share" />
+                <img src="assets/icon-twitter.svg" alt="Twitter share" />
                 <img src="assets/icon-pinterest.svg" alt="Pinterest share"" />
                 <img
                   src="assets/icon-share.svg"
@@ -52,6 +52,8 @@
                   class="share-icon-small-screen"
                 />
               </div>
+
+              <p class="screen-reader" id="share-status" aria-live="polite" aria-atomic="true"></p>
             </div>
           </figure>
         </section>

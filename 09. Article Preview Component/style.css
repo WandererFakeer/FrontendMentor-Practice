@@ -139,9 +139,9 @@ figcaption time {
 }
 
 .share-button {
-  background-color: var(-gray59);
+  background-color: var(--gray59);
   border: none;
-  padding: 0.5rem;
+  padding: 0.5rem 0.6rem;
   border-radius: 50%;
   cursor: pointer;
 
@@ -231,4 +231,15 @@ span.share {
   @media (width >= calc(660 / 16 * 1rem)) {
     display: none;
   }
+}
+
+.screen-reader {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
