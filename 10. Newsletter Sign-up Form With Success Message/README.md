@@ -26,7 +26,7 @@ If the provided email is valid, then it shows a success alert window.
 
 ### Links
 
-- Live Site URL: [Frontend Mentor | Newsletter Sign-up Form With Success Message"](https://frontendmentornewslettersuccessjs.vercel.app/)
+- Live Site URL: [Frontend Mentor | Newsletter Sign-up Form With Success Message](https://frontendmentornewslettersuccessjs.vercel.app/)
 
 
 ## My process
@@ -43,6 +43,7 @@ If the provided email is valid, then it shows a success alert window.
 
 
 ## Author
+
 
 
 - Frontend Mentor - [@WandererFakeer](https://www.frontendmentor.io/profile/WandererFakeer)
