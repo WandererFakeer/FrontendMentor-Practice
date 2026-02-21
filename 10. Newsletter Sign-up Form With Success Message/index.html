@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <!-- Form Submit -->
+    <main class="card card-newsletter" id="newsletter-layout">
+      <article class="card-components">
+        <h1 id="stay-updated">Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        <form action="" id="form" aria-labelledby="stay-updated" novalidate>
+          <div class="form-control" id="form-control">
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="email@company.com"
+              class="valid-input"
+              required
+            />
+            <p
+              class="error-message"
+              id="error-message"
+              aria-live="assertive"
+              aria-atomic="true"
+            ></p>
+          </div>
+          <button type="submit" class="page-button" id="submit-button">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </article>
+
+      <picture>
+        <source
+          media="(min-width: 700px)"
+          srcset="assets/images/illustration-sign-up-desktop.svg"
+          type="image/jpeg"
+        />
+
+        <img
+          src="assets/images/illustration-sign-up-mobile.svg"
+          alt=""
+          class="illustration"
+        />
+      </picture>
+    </main>
+
+    <!-- Success message alert-->
+    <aside id="success-layout" hidden role="alert">
+      <article class="card card-components success-layout">
+        <img src="assets/images/icon-success.svg" alt="" />
+        <h2>Thanks for subscribing!</h2>
+        <p>
+          A confirmation email has been sent to
+          <span class="user-email" id="user-email"></span>. Please open it and
+          click the button inside to confirm your subscription.
+        </p>
+        <button type="button" class="page-button">Dismiss message</button>
+      </article>
+    </aside>
+
+    <script src="script.js"></script>
+  </body>
+</html>

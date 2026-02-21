@@ -1,0 +1,223 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/Roboto-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/Roboto-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Background-image property does not transition
+ So, to have smooth transition, add @property rule */
+@property --transition-color-1 {
+  syntax: "<color>";
+  initial-value: hsl(234, 29%, 20%);
+  inherits: false;
+}
+
+@property --transition-color-2 {
+  syntax: "<color>";
+  initial-value: hsl(234, 29%, 20%);
+  inherits: false;
+}
+
+:root {
+  --tomato: hsl(4 100% 67%);
+  --tomato-transparent: hsl(4 100% 67% / 0.5);
+  --lightish-slate-grey: hsl(234, 29%, 30%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+  --smashed-pumpkin: hsl(14 100% 61%);
+  --warm-pink: hsl(346 100% 66%);
+  --font-weight-1: 700;
+  --font-weight-2: 400;
+  --line-height: 1.5;
+}
+
+html,
+body {
+  block-size: 100dvh;
+}
+
+* {
+  margin: 0;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  overflow-wrap: anywhere;
+}
+
+body {
+  display: grid;
+  place-items: center;
+
+  @media (width >= calc(700 / 16 * 1rem)) {
+    background-color: var(--charcoal-grey);
+    padding-block: 2rem;
+  }
+}
+
+.card {
+  background-color: var(--white);
+  padding-block-end: 1.5rem;
+  border-radius: 2.25rem;
+  box-shadow: 0 15px 60px hsl(0 0% 0% / 0.25);
+}
+
+.card-newsletter {
+  inline-size: min(100%, 930 / 16 * 1rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.25rem, 1.5rem + 0.5vw, 2rem);
+
+  @media (width >= calc(700 / 16 * 1rem)) {
+    padding-block-start: 1.5rem;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.card-newsletter > * {
+  flex: 1;
+}
+
+.card-components {
+  padding-inline: clamp(1rem, 1.5rem + 1vw, 4rem);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card-components :where(h1, h2) {
+  color: var(--lightish-slate-grey);
+  font-size: clamp(1.5rem, 4vw, 3.5rem);
+  font-weight: var(--font-weight-1);
+}
+
+.card-components :where(p, ul) {
+  color: var(--dark-slate-grey);
+  font-size: 1rem;
+  line-height: var(--line-height);
+}
+
+.card-components ul {
+  list-style-image: url("assets/images/icon-list.svg");
+  list-style-position: inside;
+  display: grid;
+  gap: 0.5rem;
+}
+
+form {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 1.5rem;
+}
+
+.form-control {
+  grid-row: 1 / span 2;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-template-areas:
+    "email-label valid-message"
+    "email-input email-input";
+  gap: 0.75rem;
+}
+
+.form-control label {
+  grid-area: email-label;
+  color: var(--dark-slate-grey);
+  font-size: calc(13 / 16 * 1rem);
+  font-weight: var(--font-weight-1);
+}
+
+.form-control input {
+  grid-area: email-input;
+}
+
+input.valid-input {
+  border: 1px solid var(--grey);
+}
+
+:where(.form-control input, .page-button) {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.page-button {
+  background-image: linear-gradient(
+    45deg,
+    var(--transition-color-1),
+    var(--transition-color-2)
+  );
+  color: var(--white);
+  font-weight: var(--font-weight-1);
+  cursor: pointer;
+  transition:
+    --transition-color-1 1200ms,
+    --transition-color-2 1200ms,
+    box-shadow 1000ms;
+}
+
+.page-button:is(:hover, :focus-visible) {
+  --transition-color-1: var(--smashed-pumpkin);
+  --transition-color-2: var(--warm-pink);
+
+  box-shadow: 0 1rem 2rem var(--tomato-transparent);
+
+  transition:
+    --transition-color-1 1000ms,
+    --transition-color-2 1000ms,
+    box-shadow 500ms;
+}
+
+picture {
+  order: -1;
+
+  @media (width >= calc(700 / 16 * 1rem)) {
+    padding-inline-end: clamp(1rem, 1.5rem + 1vw, 4rem);
+    order: revert;
+  }
+}
+
+picture img.illustration {
+  inline-size: 100%;
+}
+
+/* Dynamically added element with JavaScript */
+.form-control p.error-message {
+  grid-area: valid-message;
+  justify-self: end;
+  color: var(--tomato);
+  font-size: calc(12 / 16 * 1rem);
+}
+
+input.invalid-input {
+  border-width: 0 2px 2px 2px;
+  border-style: solid;
+  border-color: var(--tomato);
+}
+
+.success-layout {
+  inline-size: min(100%, 600 / 16 * 1rem);
+  padding-block: 2rem;
+  justify-self: center;
+}
+
+.user-email {
+  color: var(--lightish-slate-grey);
+  font-weight: var(--font-weight-1);
+}
+
+[hidden] {
+  display: none;
+}
