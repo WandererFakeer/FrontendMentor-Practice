@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --border-radius: 1rem;
+  --blue: hsl(246, 80%, 60%);
+  --light-red-work: hsl(15, 100%, 70%);
+  --soft-blue-play: hsl(195, 74%, 62%);
+  --light-red-study: hsl(348, 100%, 68%);
+  --lime-green-exercise: hsl(145, 58%, 55%);
+  --violet-social: hsl(264, 64%, 52%);
+  --soft-orange-self-care: hsl(43, 84%, 65%);
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+  --deep-indigo: hsl(236, 45%, 20%);
+  --white: hsl(0, 0%, 100%);
+  --font-weight-1: 500;
+  --font-weight-2: 400;
+  --font-weight-3: 300;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+html,
+body {
+  block-size: 100dvh;
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  padding-block: 3rem;
+  padding-inline: clamp(0.25rem, 0.5rem + 0.5vw, 1rem);
+  display: grid;
+  place-items: center;
+  overflow-wrap: anywhere;
+}
+
+main {
+  inline-size: min(100% - 2rem, 1350 / 16 * 1rem);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @media (width >= calc(750 / 16 * 1rem)) {
+    grid-template-columns: 16rem 1fr;
+    align-items: start;
+  }
+}
+
+header {
+  background-color: var(--dark-blue);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+header > * {
+  padding: clamp(0.5rem, 1.5rem + 0.5vw, 2rem);
+}
+
+.user-profile {
+  background-color: var(--blue);
+  border-end-start-radius: var(--border-radius);
+  border-end-end-radius: var(--border-radius);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(0.5rem, 0.5rem + 0.5vw, 1rem);
+
+  @media (width >= calc(750 / 16 * 1rem)) {
+    padding-block-end: 4.5rem;
+    flex-direction: column;
+    align-items: revert;
+  }
+}
+
+.profile-photo {
+  inline-size: min(100%, 4rem);
+}
+
+p {
+  color: var(--pale-blue);
+  font-size: clamp(
+    12 / 16 * 1rem,
+    calc((13 / 16 * 1rem) + 0.5vw),
+    15 / 16 * 1rem
+  );
+}
+
+.user-name {
+  margin-block-start: 0.5rem;
+  color: var(--white);
+  font-size: clamp(1.5rem, 1.5rem + 1vw, 2.5rem);
+  font-weight: var(--font-weight-3);
+}
+
+.timeline {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(0.25rem, 0.5rem + 0.5vw, 1rem);
+
+  @media (width >= calc(750 / 16 * 1rem)) {
+    flex-direction: column;
+  }
+}
+
+.timeline button {
+  background-color: var(--dark-blue);
+  border: none;
+  color: var(--desaturated-blue);
+  font-size: clamp(
+    12 / 16 * 1rem,
+    calc((14 / 16 * 1rem) + 0.5vw),
+    18 / 16 * 1rem
+  );
+  font-weight: var(--font-weight-2);
+  cursor: pointer;
+  transition: color 1000ms;
+}
+
+.timeline button:is(:hover, :focus, :focus-visible) {
+  color: var(--white);
+  transition: color 750ms;
+}
+
+article .to-dos {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 1.5rem;
+}
+
+.to-do-list {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.to-do-image-wrapper {
+  padding-inline-end: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.to-do-image {
+  inline-size: 5rem;
+  block-size: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  margin-block-start: -1rem;
+}
+
+.to-do-details-wrapper {
+  background-color: var(--deep-indigo);
+  block-size: stretch;
+  padding: clamp(0.5rem, 1rem + 0.5vw, 1.5rem);
+  border-radius: var(--border-radius);
+  display: grid;
+  gap: clamp(0.75rem, 1rem + 0.5vw, 2rem);
+  cursor: pointer;
+  transform: translateY(-1rem);
+  transition: background-color 1000ms;
+}
+
+.to-do-details-wrapper:is(:hover, :focus-visible) {
+  background-color: var(--desaturated-blue);
+  transition: background-color 800ms;
+}
+
+.name-image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.list-item-name {
+  color: var(--white);
+  font-size: clamp(
+    12 / 16 * 1rem,
+    calc((14 / 16 * 1rem) + 0.5vw),
+    18 / 16 * 1rem
+  );
+  font-weight: var(--font-weight-2);
+}
+
+.time-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+
+  @media (width >= calc(750 / 16 * 1rem)) {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.list-item-current-time {
+  color: var(--white);
+  font-size: clamp(0.75rem, 1.8rem + 0.5vw, 3.5rem);
+  font-weight: var(--font-weight-3);
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <section aria-labelledby="user-name" class="user-profile">
+          <img
+            src="assets/image-jeremy.png"
+            alt="Headshot of the user"
+            class="profile-photo"
+          />
+
+          <div class="profile-name">
+            <p>Report for</p>
+            <h1 id="user-name" class="user-name">Jeremy Robson</h1>
+          </div>
+        </section>
+        <ul class="timeline">
+          <li>
+            <button
+              type="button"
+              class="timeline-button"
+              id="daily"
+              data-time="daily"
+              aria-label="Daily Button"
+            >
+              Daily
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="timeline-button"
+              data-time="weekly"
+              aria-label="Weekly Button"
+            >
+              Weekly
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="timeline-button"
+              data-time="monthly"
+              aria-label="Monthly Button"
+            >
+              Monthly
+            </button>
+          </li>
+        </ul>
+      </header>
+
+      <article>
+        <ul
+          class="to-dos"
+          id="to-dos"
+          aria-live="polite"
+          aria-atomic="true"
+        ></ul>
+      </article>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
