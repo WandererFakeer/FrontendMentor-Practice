@@ -1,3 +1,4 @@
+// DOM references
 const daily = document.querySelector("#daily");
 const timelineButtons = document.querySelectorAll(".timeline-button");
 const toDos = document.querySelector("#to-dos");
@@ -149,3 +150,4 @@ timelineButtons.forEach((button) => {
     render(button.dataset.time);
   });
 });
+
