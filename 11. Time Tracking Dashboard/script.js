@@ -126,8 +126,13 @@ function render(time) {
 // Function to get data
 async function getData() {
   const response = await fetch("./data.json");
-  const data = await response.json();
-  return data;
+
+  try {
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    console.error("Could not fetch data");
+  }
 }
 
 // Function to set initial data
