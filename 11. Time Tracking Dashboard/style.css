@@ -103,16 +103,19 @@ p {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: clamp(0.25rem, 0.5rem + 0.5vw, 1rem);
 
   @media (width >= calc(750 / 16 * 1rem)) {
     flex-direction: column;
+    align-items: revert;
   }
 }
 
 .timeline button {
   background-color: var(--dark-blue);
   border: none;
+  padding: 0.3rem;
   color: var(--desaturated-blue);
   font-size: clamp(
     12 / 16 * 1rem,
@@ -120,6 +123,7 @@ p {
     18 / 16 * 1rem
   );
   font-weight: var(--font-weight-2);
+  text-align: start;
   cursor: pointer;
   transition: color 1000ms;
 }
