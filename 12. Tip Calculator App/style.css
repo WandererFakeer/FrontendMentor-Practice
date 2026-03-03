@@ -40,6 +40,8 @@ body {
   display: grid;
   place-items: center;
   gap: clamp(1rem, 1.5rem + 0.5vw, 2rem);
+  container-type: inline-size;
+  container-name: body-container;
 }
 
 .logo {
@@ -49,20 +51,20 @@ body {
 main {
   background-color: var(--white);
   inline-size: min(100% - 2rem, 920 / 16 * 1rem);
-  padding: clamp(1rem, 1.8rem + 0.5vw, 3rem);
+  padding: clamp(1rem, 0.273rem + 3.636vw, 2.5rem);
   border-radius: var(--border-radius-1);
   display: grid;
   gap: clamp(1rem, 1.5rem + 0.5vw, 2.5rem);
   box-shadow: 0 2rem 2.5rem var(--medium-cyan-dark);
 
-  @media (width >= calc(750 / 16 * 1rem)) {
+  @container body-container (inline-size >= calc(700 / 16 * 1rem)) {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 .form {
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .form-data {
@@ -160,13 +162,14 @@ input[type="radio"]:checked + label {
   background-color: var(--very-dark-cyan);
   padding-block-start: 3rem;
   padding-block-end: 2rem;
-  padding-inline: clamp(1rem, 1rem + 0.5vw, 2.5rem);
+  padding-inline: clamp(0.5rem, -0.045rem + 2.727vw, 2rem);
   border-radius: var(--border-radius-2);
   display: grid;
   gap: clamp(1.5rem, 2rem + 0.5vw, 3rem);
 }
 
 .result-heading {
+  align-self: start;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
