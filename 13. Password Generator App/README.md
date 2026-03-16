@@ -159,7 +159,7 @@ So the slider thumb code is -
 ```
 
 	Second issue I encountered - I was unable to change the color of the icon images in `:hover` and `:focus-visible` states. 
-As the icon images - the copy icon image and the Generate arrow icon image, are not svg, it was hard to change their colors. 
+As the icon images - the copy icon image and the Generate arrow icon image, are not svg elements, it was hard to change their colors. 
 I found this article - [Coloring white Images with CSS filter](https://dev.to/domysee/coloring-white-images-with-css-filter-4bd1). Although I understood the `filter`, it was still hard for me to generate the colors I was intending to use.
 
 Then I used - [https://codepen.io/sosuke/pen/Pjoqqp](CSS filter generator to convert from black to target hex color) this Codepen to change the color of the icon images in `:hover` and `:focus-visible` states.
