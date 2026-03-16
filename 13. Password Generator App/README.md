@@ -189,7 +189,7 @@ const bitOfEntropy = Math.log2(arrayPoolLength) * length;
 
 - [Creating a custom CSS range slider with JavaScript upgrades](https://blog.logrocket.com/creating-custom-css-range-slider-javascript-upgrades/)
 
-- [https://codepen.io/sosuke/pen/Pjoqqp](CSS filter generator to convert from black to target hex color)
+- [CSS filter generator to convert from black to target hex color](https://codepen.io/sosuke/pen/Pjoqqp)
 
 - [A Math-Based Approach to Password Strength](https://www.linkedin.com/pulse/math-based-approach-password-strength-walt-powell-cissp-cism)
 
