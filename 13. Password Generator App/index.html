@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <article>
+        <div class="password-wrapper">
+          <p class="password" id="password" aria-live="assertive" aria-atomic="true"></p>
+          <p class="copy-password-text" id="copy-password-text" aria-live="polite" aria-atomic="true"></p>
+          <button type="button" class="icon-copy-button" id="icon-copy-button" aria-label="Copy password">
+            <img src="assets/images/icon-copy.svg" alt="" class="icon-copy" id="icon-copy" />
+          </button>
+        </div>
+
+        <form action="" class="form" id="form" novalidate>
+          <div class="range-wrapper">
+            <label for="slider">Character Length</label>
+            <input type="range" name="slider" class="slider" id="slider" value="0" min="0" max="30" aria-live="polite" aria-atomic="true" />
+            <p class="show-length" id="show-length" aria-live="polite" aria-atomic="true">0</p>
+          </div>
+
+          <ul class="checkboxes-wrapper" role="list">
+            <li class="checkbox-wrapper">
+              <img src="assets/images/icon-check.svg" alt="" class="icon-check" id="icon-check-uppercase" hidden />
+              <input type="checkbox" name="user-choices" value="uppercase" id="uppercase" aria-live="polite" aria-atomic="true" />
+              <label for="uppercase">Include Uppercase Letters</label>
+            </li>
+
+            <li class="checkbox-wrapper">
+              <img src="assets/images/icon-check.svg" alt="" class="icon-check" id="icon-check-lowercase" hidden />
+              <input type="checkbox" name="user-choices" value="lowercase" id="lowercase" aria-live="polite" aria-atomic="true" />
+              <label for="lowercase">Include Lowercase Letters</label>
+            </li>
+
+            <li class="checkbox-wrapper">
+              <img src="assets/images/icon-check.svg" alt="" class="icon-check" id="icon-check-number" hidden />
+              <input type="checkbox" name="user-choices" value="number" id="number" aria-live="polite" aria-atomic="true" />
+              <label for="number">Include Numbers</label>
+            </li>
+
+            <li class="checkbox-wrapper">
+              <img src="assets/images/icon-check.svg" alt="" class="icon-check" id="icon-check-symbol" hidden />
+              <input type="checkbox" name="user-choices" value="symbol" id="symbol" aria-live="polite" aria-atomic="true" />
+              <label for="symbol">Include Symbols</label>
+            </li>
+          </ul>
+
+          <div class="strength-wrapper">
+            <p class="strength-label">Strength</p>
+            <p class="strength-classification" id="strength-classification" aria-label="Password Strength" aria-live="assertive" aria-atomic="true"></p>
+            <div class="strength-rectangles-wrapper">
+              <div class="strength-rectangle" id="rectangle-one"></div>
+              <div class="strength-rectangle" id="rectangle-two"></div>
+              <div class="strength-rectangle" id="rectangle-three"></div>
+              <div class="strength-rectangle" id="rectangle-four"></div>
+            </div>
+          </div>
+
+          <button type="button" class="generate" id="generate">
+            Generate
+            <img src="assets/images/icon-arrow-right.svg" class="icon-arrow-right" id="icon-arrow-right" alt="" />
+          </button>
+        </form>
+      </article>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
