@@ -60,7 +60,7 @@ After user copies the generated password, they will see `COPIED` text beside the
 
 ### Links
 
-- Live Site URL: [Frontend Mentor | Password Generator App](https://passwordgeneratorapp.vercel.app/)
+- Live Site URL: [Frontend Mentor | Password Generator App](https://frontendmentorpasswordgeneratorapp.vercel.app/)
 
 
 ## My process
