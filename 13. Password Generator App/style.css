@@ -226,13 +226,13 @@ article > * {
 }
 
 input[type="checkbox"] {
+  appearance: none;
   inline-size: 1.25rem;
   block-size: 1.25rem;
   outline: 2px solid var(--mischka);
-  appearance: none;
 }
 
-input[type="checkbox"]:hover {
+input[type="checkbox"]:is(:hover, :focus-visible) {
   outline: 2px solid var(--mint-green);
 }
 
