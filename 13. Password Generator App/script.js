@@ -48,7 +48,7 @@ function render() {
     Strong: { count: 4, class: "rectangle-four" },
   };
 
-  const activeStrengthObject = strengthMap[state.strength] ?? strengthMap[""];
+  const activeStrengthObject = strengthMap[state.strength];
 
   strengthRectangles.forEach((element, index) => {
     element.classList.remove("rectangle-one", "rectangle-two", "rectangle-three", "rectangle-four");
