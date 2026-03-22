@@ -16,11 +16,8 @@
   --strong-cyan: hsl(172, 67%, 45%);
   --very-dark-cyan: hsl(183, 100%, 15%);
   --medium-cyan-dark: hsl(185 38% 50% / 0.2);
-  --medium-cyan-light: hsl(185 38% 97%);
   --light-grayish-cyan: hsl(185, 41%, 84%);
   --dark-grayish-cyan: hsl(186, 14%, 43%);
-  --desaturated-teal: hsl(180, 25%, 32%);
-  --grayish-cyan: hsl(184, 14%, 56%);
   --gothic: hsl(183, 15%, 56%);
   --pale-turquoise: hsl(172, 61%, 77%);
   --pine-green: hsl(183, 78%, 24%);
@@ -73,19 +70,20 @@ main {
   gap: 0.5rem;
 }
 
-.category {
+.input-label {
   color: var(--dark-grayish-cyan);
   font-size: 1rem;
 }
 
-.icon-and-data {
+:where(.icon-and-data, .custom-input-wrapper) {
   border-radius: var(--border-radius-3);
   box-shadow: 0 0 0.3rem var(--very-dark-cyan);
   position: relative;
 }
 
-.icon-and-data:is(:hover, :focus-visible) {
-  border: 2px solid var(--strong-cyan);
+:where(.icon-and-data, .custom-input-wrapper):is(:hover, :focus-visible) {
+  outline: 2px solid var(--strong-cyan);
+  outline-offset: 2px;
 }
 
 .icon-and-data img {
@@ -205,7 +203,7 @@ button {
 }
 
 button:is(:hover, :focus-visible) {
-  background-color: var(--pale-turquoise);
+  background-color: var(--medium-gray);
 }
 
 button:disabled {
@@ -229,16 +227,6 @@ button:disabled {
   grid-row: 2;
 }
 
-.invalid-input {
+.invalid-input{
   outline: 2px solid var(--coral-copper);
 }
-
-[hidden] {
-  display: none;
-}
-
-.custom-input-place:is(:hover, :focus-visible, :focus) {
-  outline: 2px solid var(--strong-cyan);
-  border-radius: var(--border-radius-3);
-}
-
