@@ -139,13 +139,15 @@ function generateArrayFromArray(length, array) {
 
 // Function to shuffle array
 function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
+  const shuffledArray = [...array];
+  
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
     let randomIndex = generateRandomIntegerFromRange(i + 1);
 
-    [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
+    [shuffledArray[i], shuffledArray[randomIndex]] = [shuffledArray[randomIndex], shuffledArray[i]];
   }
 
-  return array;
+  return shuffledArray;
 }
 
 // Function to get the strength
