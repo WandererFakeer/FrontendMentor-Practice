@@ -212,17 +212,15 @@ article > * {
 }
 
 .checkbox-wrapper {
-  display: flex;
-  gap: 1.5rem;
-  position: relative;
   cursor: pointer;
+  position: relative;
 }
 
 .checkbox-wrapper img {
   position: absolute;
-  inset-block-start: 50%;
-  inset-inline-start: 0.5%;
-  transform: translateY(-50%);
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  transform: translate(25%, 50%);
 }
 
 input[type="checkbox"] {
