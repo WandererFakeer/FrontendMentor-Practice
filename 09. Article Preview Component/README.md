@@ -23,7 +23,7 @@ When clicking on the share button, it opens up share popover with FaceBook, Twit
 
 ### Links
 
-- Live Site URL: [Frontend Mentor | Article Preview Component"](https://frontendmentorarticlepreviewjs.vercel.app/)
+- Live Site URL: [Frontend Mentor | Article Preview Component](https://frontendmentorarticlepreviewjs.vercel.app/)
 
 
 ## My process
