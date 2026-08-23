@@ -27,7 +27,7 @@ This is a screen-size friendly dashboard.
 
 ### Links
 
-- Live Site URL: [Frontend Mentor | Newsletter Sign-up Form With Success Message](https://frontendmentortimetrackingdashboard.vercel.app/)
+- Live Site URL: [Frontend Mentor | Time tracking dashboard](https://frontendmentortimetrackingdashboard.vercel.app/)
 
 
 ## My process
