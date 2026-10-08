@@ -10,7 +10,7 @@ const tipPerPerson = document.querySelector("#tip-per-person");
 const totalPerPerson = document.querySelector("#total-per-person");
 const button = document.querySelector("#button");
 
-const FETCH_URL = "https://api.techniknews.net/ipgeo/";
+const FETCH_URL = "https://ipapi.co/currency/";
 
 const state = {
   currencySymbol: "",
@@ -26,13 +26,12 @@ const state = {
 // Function to get the local currency
 async function getCurrency(){
   const response = await fetch(FETCH_URL);
-  return await response.json();
+  return await response.text();
 }
 
 // Function to set the local currency
 async function setCurrency(){
-  const data = await getCurrency();
-  const currency = data?.currency;
+  const currency = await getCurrency();
   state.currencySymbol = CURRENCY_SYMBOL[currency];
 }
 
